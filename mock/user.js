@@ -13,13 +13,13 @@ const users = {
     roles: ['admin'],
     introduction: 'I am a super administrator',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    name: '管理员'
   },
   'editor-token': {
     roles: ['editor'],
     introduction: 'I am an editor',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Normal Editor'
+    name: '普通人员'
   }
 }
 
@@ -35,13 +35,13 @@ module.exports = [
       // mock error
       if (!token) {
         return {
-          code: 60204,
+          code: 500,
           message: 'Account and password are incorrect.'
         }
       }
 
       return {
-        code: 20000,
+        code: 200,
         data: token
       }
     }
@@ -64,7 +64,7 @@ module.exports = [
       }
 
       return {
-        code: 20000,
+        code: 200,
         data: info
       }
     }
@@ -76,7 +76,7 @@ module.exports = [
     type: 'post',
     response: _ => {
       return {
-        code: 20000,
+        code: 200,
         data: 'success'
       }
     }
