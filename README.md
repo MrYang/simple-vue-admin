@@ -10,6 +10,8 @@ npm install
 npm run dev
 ```
 
+去除mock模块，使用`flask` 构建一个简单的开发环境后端。
+
 ## 构建
 
 ```bash
